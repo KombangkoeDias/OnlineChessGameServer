@@ -24,6 +24,11 @@ expire_refresh_token_time = datetime.timedelta(weeks=1)
 
 localFenStorage = dict()
 
+@app.route('/test', methods=['GET'])
+@cross_origin()
+def test():
+    return {"test": "test"}
+
 @app.route('/code', methods=['GET'])
 @cross_origin()
 @jwt_required

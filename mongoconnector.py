@@ -3,8 +3,10 @@ import pymongo
 db = None
 
 def connect():
+    
     client = pymongo.MongoClient("mongodb+srv://analytics:analytics-password@chessgame.p59zi.mongodb.net/chessgame?retryWrites=true&w=majority") 
     global db
+    
     db = client.chessgame
     return db
 
